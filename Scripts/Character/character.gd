@@ -21,7 +21,7 @@ func _physics_process(delta):
 		velocity.y = salto
 		saltos_restantes -= 1
 		wall_jump = false
-		print(saltos_restantes)
+		#print(saltos_restantes)
 	
 	#reset de los saltos restantes
 	if is_on_floor():
@@ -33,7 +33,7 @@ func _physics_process(delta):
 		velocity.y = salto
 		velocity.x = -velocity.x
 		wall_jump = true
-		print("si")
+		#print("si")
 		
 	
 	#movimiento base
