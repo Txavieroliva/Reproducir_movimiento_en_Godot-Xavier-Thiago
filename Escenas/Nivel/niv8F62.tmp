@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=3 uid="uid://dnhh0va6wis10"]
+
+[ext_resource type="PackedScene" uid="uid://cmdvwnxsc34v" path="res://Escenas/Floor/floor.tscn" id="1_2kah0"]
+[ext_resource type="PackedScene" uid="uid://ihcrx6abmqxt" path="res://Escenas/Character/character.tscn" id="2_ch0ny"]
+
+[node name="Nivel" type="Node2D"]
+
+[node name="Node" type="Node" parent="."]
+
+[node name="Floor3" parent="Node" instance=ExtResource("1_2kah0")]
+position = Vector2(535, -1.99988)
+scale = Vector2(98.0391, 0.871678)
+
+[node name="Floor6" parent="Node" instance=ExtResource("1_2kah0")]
+position = Vector2(-319, 640)
+scale = Vector2(98.0391, 0.871678)
+
+[node name="Floor7" parent="Node" instance=ExtResource("1_2kah0")]
+position = Vector2(1483, 643)
+scale = Vector2(98.0391, 0.871678)
+
+[node name="Floor4" parent="Node" instance=ExtResource("1_2kah0")]
+position = Vector2(-7, 344)
+rotation = 1.5708
+scale = Vector2(54.4791, 3.59168)
+
+[node name="Floor9" parent="Node" instance=ExtResource("1_2kah0")]
+position = Vector2(313, 789)
+rotation = 1.5708
+scale = Vector2(42.8842, 13.1695)
+
+[node name="Floor5" parent="Node" instance=ExtResource("1_2kah0")]
+position = Vector2(1151, 301)
+rotation = 1.5708
+scale = Vector2(54.4791, 0.871678)
+
+[node name="Character" parent="." instance=ExtResource("2_ch0ny")]
+position = Vector2(90, 598)
