@@ -5,6 +5,7 @@ var velocidad = 300.0
 var salto = -400.0
 var saltos_restantes = 1
 var dash = false
+var wall_jump = true
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -19,16 +20,19 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("up") and saltos_restantes > 0:
 		velocity.y = salto
 		saltos_restantes -= 1
+		wall_jump = false
 		print(saltos_restantes)
 	
 	#reset de los saltos restantes
 	if is_on_floor():
 		saltos_restantes = 1
+		wall_jump = false
 	
 	#Se agrega el Wall Jump
-	if is_on_wall() and Input.is_action_just_pressed("up"):
+	if is_on_wall() and Input.is_action_just_pressed("up") and not wall_jump:
 		velocity.y = salto
 		velocity.x = -velocity.x
+		wall_jump = true
 		print("si")
 		
 	
